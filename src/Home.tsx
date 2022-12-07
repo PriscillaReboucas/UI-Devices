@@ -1,34 +1,10 @@
-import { useState, useEffect } from "react";
-import * as devicesAPI from './devicesAPI';
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { IDevices } from "./@types/devices.d";
+import { DevicesContext } from "./DevicesContext";
 
 export const Home = () => {
-    const [devices, setDevices] = useState<[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        devicesAPI.retrieve().then( devicesList => {
-            setDevices(devicesList.devices)
-            setLoading(false)
-        })
-    }, []);
-
-    type Line = {
-        name: string,
-        id: string
-    }
-
-    type Product = {
-        abbrev: string,
-        name: string
-    }
-
-    interface IDevices {
-        model_id: string
-        line: Line
-        product: Product
-    }
-
-    console.log(devices, 'here is product name')
+    const {devices, loading} = useContext(DevicesContext);
 
     if(loading) {
         return (
@@ -43,10 +19,10 @@ export const Home = () => {
             <h3>PRODUCT LINE</h3>
             {devices && devices.map((device: IDevices) => {
                 return (
-                    <article>
+                    <Link to={`/devices/${device.product.name}`} key={device.model_id}>
                         <p>{device.line.name}</p>
                         <p>{device.product.name}</p>    
-                    </article>
+                    </Link>
                 )
             })}
         </>
