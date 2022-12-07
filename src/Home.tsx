@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { IDevices } from "./@types/devices.d";
 import { DevicesContext } from "./DevicesContext";
+import { DevicesContextType } from "./@types/devices.d";
 
 export const Home = () => {
-    const {devices, loading} = useContext(DevicesContext);
+    const {devices, loading} = useContext(DevicesContext) as DevicesContextType;
 
     if(loading) {
         return (

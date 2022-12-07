@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export type Line = {
     name: string,
     id: string
@@ -28,4 +30,13 @@ export interface IDevices {
     product: Product
     shortname: string[]
     unifi: Unifi
+}
+
+export type DevicesContextType = {
+    devices: IDevices[]
+    loading: boolean
+}
+
+export type DevicesProviderProps = {
+    children: ReactNode
 }
