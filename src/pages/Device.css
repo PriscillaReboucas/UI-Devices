@@ -1,23 +1,52 @@
+.device__descriptions--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    text-align: center;
+    align-self: center;
+    height: 80vh;
+}
+
 .device__toolbar--container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     gap: .5rem;
     height: 48px;
     border: 1px solid #EDEDF0;
     padding: .5rem;
 }
 
+.back__icon {
+    margin-left: 1rem;
+}
+
+.device__image--wrapper {
+    margin-bottom: 1rem;
+}
+
 .device__name {
     text-align: center;
     width: 100%;
-
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 44px;
     color: #00000073;
+}
+
+@media only screen and (min-width: 768px) {
+    .device__descriptions--container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .device__image--wrapper {
+        margin-right: 2rem;
+    }
 }

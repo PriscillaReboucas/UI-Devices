@@ -4,55 +4,30 @@ import { DevicesContextType } from "../@types/devices.d";
 import { DevicesContext } from "../DevicesContext";
 import backBtn from '../assets/back-btn.png';
 import './Device.css';
+import { DeviceProperties } from "../components/DeviceProperties";
 
 export const Device = () => {
     const { productName } = useParams();
     const { devices } = useContext(DevicesContext) as DevicesContextType;
+    const product = devices?.filter(device => device.product.name === productName)[0];
 
-    const product = devices?.filter(device => device.product.name === productName)[0]
 
+    console.log(product, 'product inside device page')
     return (
         <>
           <div className='device__toolbar--container'>
-            <Link to='/'>
+            <Link to='/' className="back__icon">
                 <img src={backBtn} alt="back button"/>
             </Link>
             <h2 className="device__name">{product?.product.name}</h2>
           </div>
-          <section>
-            <article>
-                <img src={`https://static.ui.com/fingerprint/ui/icons/${product?.icon.id}_257x257.png`} alt={product?.product.name} />
-                <ul>
-                    <li>
-                        <h3>Product Line</h3>
-                        <p>{product?.line.name}</p>
-                    </li>
-                    <li>
-                        <h3>ID</h3>
-                        <p>{product?.line.id}</p>
-                    </li>
-                    <li>
-                        <h3>Name</h3>
-                        <p>{product?.product.name}</p>
-                    </li>
-                    <li>
-                        <h3>Short name</h3>
-                        <p>{product.shortnames[0]}</p>
-                    </li>
-                    <li>
-                        <h3>Max. power</h3>
-                        <p>{product.unifi? product.unifi.network.radios.na.maxPower + ' W ' : '-'}</p>
-                    </li>
-                    <li>
-                        <h3>Speed</h3>
-                        <p>{product.unifi? product.unifi.network.radios.na.maxSpeedMegabitsPerSecond + 'Mbps' : '-'}</p>
-                    </li>
-                    <li>
-                        <h3>Number of ports</h3>
-                        <p>{product.unifi? product.unifi.network.numberOfPorts : '-'}</p>
-                    </li>
-                </ul>
-            </article>
+          <section className="device__descriptions--container">
+                <div className="device__image--wrapper">
+                    <img src={`https://static.ui.com/fingerprint/ui/icons/${product?.icon.id}_257x257.png`} alt={product?.product.name} />
+                </div>
+                <article>
+                    <DeviceProperties  product={product}/>
+                </article>
           </section>
         </>
     )
