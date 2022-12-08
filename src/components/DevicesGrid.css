@@ -1,0 +1,46 @@
+.cardGrid--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.devices--size {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px 0px 4px 4px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+
+    color: #BDBDBD;
+	width: -webkit-calc(100% - 232px/2);
+	width: -moz-calc(100% - 232px/2);
+	width: calc(100% - 232px/2);
+}
+
+.cardGrid--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media only screen and (min-width: 1360px){
+    .cardGrid--flex {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+    .devices--size {
+        width: -webkit-calc(80% - 232px);
+        width: -moz-calc(80% - 232px);
+        width: calc(80% - 232px);
+    }
+}

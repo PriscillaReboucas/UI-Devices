@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { DevicesContextType } from "./@types/devices.d";
 import { DevicesContext } from "./DevicesContext";
 import { Toolbar } from "./components/Toolbar";
-import { CardGrid } from "./components/CardGrid";
+import { DevicesGrid } from "./components/DevicesGrid";
 
 export const Home = () => {
   const { devices, loading } = useContext(DevicesContext) as DevicesContextType;
@@ -18,7 +18,7 @@ export const Home = () => {
   return (
     <>
       <Toolbar />
-      <CardGrid devices={devices} />
+      <DevicesGrid devices={devices} />
     </>
   );
 };
