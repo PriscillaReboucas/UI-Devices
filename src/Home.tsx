@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { IDevices, DevicesContextType } from "./@types/devices.d";
+import {  DevicesContextType } from "./@types/devices.d";
 import { DevicesContext } from "./DevicesContext";
-import background from './assets/background.png';
 import { Toolbar } from "./components/Toolbar";
+import { CardList } from "./components/CardList";
 
 export const Home = () => {
     const {devices, loading} = useContext(DevicesContext) as DevicesContextType;
@@ -18,16 +17,8 @@ export const Home = () => {
 
     return (
         <>
-        <Toolbar />
-        {devices && devices.map((device: IDevices) => {
-            return (
-                <Link to={`/devices/${device.product.name}`} key={device.model_id}>
-                    <img src={background} alt={device.product.name}/>
-                    <p>{device.line.name}</p>
-                    <p>{device.product.name}</p>    
-                </Link>
-            )
-        })}
+            <Toolbar />
+            <CardList devices={devices}/>
         </>
     )
 }
