@@ -16,24 +16,24 @@ export const Toolbar = () => {
                 <img className='close__input' src={close} alt='close search'/>
             </div>
             <div className='toolbar__actions--container'>
-                <img className='actions__listView' src={listView} alt='list view'/>
+                <div className='actions__listView--wrap'>
+                    <img className='actions__listView' src={listView} alt='list view'/>
+                </div>
                 <div className='actions__gridView--container'>
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <label>
-                    <h3>Filter</h3>
-                    <select className='actions__filter'>
-                        <option value='UniFi'>UniFi</option>
-                        <option value='UniFi LTE'>UniFi LTE</option>
-                        <option value='UniFi Protect'>UniFi Protect</option>
-                        <option value='UniFi Access'>UniFi Access</option>
-                        <option value='airMax'>airMax</option>
-                        <option value='EdgeMax'>EdgeMax</option>
-                    </select>
-                </label>
+                <select className='actions__filter'>
+                    <option value='all'>Filter</option>
+                    <option value='UniFi'>UniFi</option>
+                    <option value='UniFi LTE'>UniFi LTE</option>
+                    <option value='UniFi Protect'>UniFi Protect</option>
+                    <option value='UniFi Access'>UniFi Access</option>
+                    <option value='airMax'>airMax</option>
+                    <option value='EdgeMax'>EdgeMax</option>
+                </select>
             </div>
         </div>
     )

@@ -19,15 +19,15 @@ export const Home = () => {
     return (
         <>
         <Toolbar />
-            {devices && devices.map((device: IDevices) => {
-                return (
-                    <Link to={`/devices/${device.product.name}`} key={device.model_id}>
-                        <img src={background} alt={device.product.name}/>
-                        <p>{device.line.name}</p>
-                        <p>{device.product.name}</p>    
-                    </Link>
-                )
-            })}
+        {devices && devices.map((device: IDevices) => {
+            return (
+                <Link to={`/devices/${device.product.name}`} key={device.model_id}>
+                    <img src={background} alt={device.product.name}/>
+                    <p>{device.line.name}</p>
+                    <p>{device.product.name}</p>    
+                </Link>
+            )
+        })}
         </>
     )
 }

@@ -10,7 +10,7 @@ export const Header = () => {
                 </div>
                 <h1 className='header__title'>Devices</h1>
             </div>
-            <div className='header__subtitle'>Developed by: Priscilla Rebouças</div>
+            <div className='header__subtitle'>Author: Priscilla Rebouças</div>
         </header>
     )
 }
