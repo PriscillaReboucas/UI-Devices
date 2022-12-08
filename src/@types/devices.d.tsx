@@ -24,8 +24,14 @@ export type Unifi = {
     radios: Radios
 }
 
+export type Icon = {
+    resolutions: Array<number>
+    id: string
+}
+
 export interface IDevices {
     model_id: string
+    icon: Icon
     line: Line
     product: Product
     shortname: string[]
