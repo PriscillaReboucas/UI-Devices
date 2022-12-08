@@ -46,6 +46,8 @@ export interface IDevices {
 export type DevicesContextType = {
     devices: IDevices[]
     loading: boolean
+    search: string
+    setSearch: Function
 }
 
 export type DevicesProviderProps = {
