@@ -48,6 +48,8 @@ export type DevicesContextType = {
     loading: boolean
     search: string
     setSearch: Function
+    filter: string
+    setFilter: Function
 }
 
 export type DevicesProviderProps = {
