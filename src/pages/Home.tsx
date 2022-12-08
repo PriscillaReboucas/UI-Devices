@@ -5,7 +5,7 @@ import { Toolbar } from "../components/Toolbar";
 import { DevicesGrid } from "../components/DevicesGrid";
 
 export const Home = () => {
-  const { devices, loading } = useContext(DevicesContext) as DevicesContextType;
+  const { devices, loading, search } = useContext(DevicesContext) as DevicesContextType;
 
   if (loading) {
     return (
@@ -15,10 +15,12 @@ export const Home = () => {
     );
   }
 
+  const searchProducts = devices.filter(device => device.product.name.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <>
       <Toolbar />
-      <DevicesGrid devices={devices} />
+      <DevicesGrid devices={searchProducts} />
     </>
   );
 };
