@@ -1,16 +1,15 @@
-import './App.css';
-import {Routes, Route} from 'react-router-dom';
-import { Home } from './Home';
-import { Product } from './Product';
-import { Header } from './components/Header';
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Device } from "./pages/Device";
+import { Header } from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/devices/:productName' element={<Product />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/devices/:productName" element={<Device />}></Route>
       </Routes>
     </div>
   );

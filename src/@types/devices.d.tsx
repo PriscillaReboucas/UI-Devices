@@ -12,16 +12,21 @@ export type Product = {
 
 export type Na = {
     maxPower: number
-    maxSpeed: number
+    maxSpeedMegabitsPerSecond: number
 }
 
 export type Radios = {
     na: Na
 }
 
-export type Unifi = {
-    numberofPorts: number
+export type Network = {
+    numberOfPorts: number
     radios: Radios
+}
+
+export type Unifi = {
+    network: Network
+    adoptability: string
 }
 
 export type Icon = {
@@ -34,7 +39,7 @@ export interface IDevices {
     icon: Icon
     line: Line
     product: Product
-    shortname: string[]
+    shortnames: Array<string>
     unifi: Unifi
 }
 

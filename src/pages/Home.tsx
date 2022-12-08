@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { DevicesContextType } from "./@types/devices.d";
-import { DevicesContext } from "./DevicesContext";
-import { Toolbar } from "./components/Toolbar";
-import { DevicesGrid } from "./components/DevicesGrid";
+import { DevicesContextType } from "../@types/devices.d";
+import { DevicesContext } from "../DevicesContext";
+import { Toolbar } from "../components/Toolbar";
+import { DevicesGrid } from "../components/DevicesGrid";
 
 export const Home = () => {
   const { devices, loading } = useContext(DevicesContext) as DevicesContextType;
