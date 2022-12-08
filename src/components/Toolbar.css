@@ -1,7 +1,7 @@
 .toolbar--container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;  
     height: 48px;
     border: 1px solid #EDEDF0;
@@ -15,6 +15,7 @@
     height: 32px;
     background-color: #F6F6F8;
     border-radius: 4px;
+    margin-left: 2rem;
 }
 
 .toolbar__search--container:hover {
@@ -52,6 +53,14 @@
 
 .close__input {
     margin-right: .6rem;
+}
+
+.toolbar__actions--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
 }
 
 .toolbar__gridView--container {

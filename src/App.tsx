@@ -7,7 +7,7 @@ import { Header } from './components/Header';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/devices/:productName' element={<Product />}></Route>
