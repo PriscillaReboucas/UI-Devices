@@ -6,7 +6,7 @@ import { DevicesGrid } from "../components/DevicesGrid";
 import { DevicesList } from "../components/DevicesList";
 
 export const Home = () => {
-  const { devices, loading, search, filter } = useContext(DevicesContext) as DevicesContextType;
+  const { devices, loading, search, filter, view } = useContext(DevicesContext) as DevicesContextType;
 
   const filteredProducts = useMemo(() => {
     const searchProducts = devices.filter(device => device.product.name.toLowerCase().includes(search.toLowerCase()));
@@ -28,8 +28,7 @@ export const Home = () => {
   return (
     <>
       <Toolbar />
-      <DevicesGrid devices={filteredProducts} />
-      <DevicesList devices={filteredProducts} />
+      {view === 'list'? <DevicesList devices={filteredProducts} /> : <DevicesGrid devices={filteredProducts} />}
     </>
   );
 };

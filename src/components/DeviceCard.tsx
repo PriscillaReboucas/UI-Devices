@@ -4,7 +4,7 @@ import './DeviceCard.css';
 
 type Props = {
     device: IDevices;
-  };
+};
 
 export const DeviceCard = ({device}:Props) => {
     return (<>
