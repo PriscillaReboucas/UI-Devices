@@ -10,7 +10,7 @@ export const DevicesList = ({devices}:Props) => {
     return (
     <section className='devicesList--container'>
         <section className='devicesList__titles--container'>
-            <h2 className='title title__small'>123 devices</h2>
+            <h2 className='title title__small'>{devices.length} devices</h2>
             <h2 className='title title__big'>Product Line</h2>
             <h2 className='title title__big'>Name</h2>
         </section>
