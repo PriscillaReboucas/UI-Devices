@@ -3,6 +3,7 @@ import { DevicesContextType } from "../@types/devices.d";
 import { DevicesContext } from "../DevicesContext";
 import { Toolbar } from "../components/Toolbar";
 import { DevicesGrid } from "../components/DevicesGrid";
+import { DevicesList } from "../components/DevicesList";
 
 export const Home = () => {
   const { devices, loading, search, filter } = useContext(DevicesContext) as DevicesContextType;
@@ -28,6 +29,7 @@ export const Home = () => {
     <>
       <Toolbar />
       <DevicesGrid devices={filteredProducts} />
+      <DevicesList devices={filteredProducts} />
     </>
   );
 };

@@ -50,6 +50,8 @@ export type DevicesContextType = {
     setSearch: Function
     filter: string
     setFilter: Function
+    view: string
+    setView: Function
 }
 
 export type DevicesProviderProps = {

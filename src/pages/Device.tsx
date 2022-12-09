@@ -11,9 +11,6 @@ export const Device = () => {
     const { devices } = useContext(DevicesContext) as DevicesContextType;
     const product = devices?.filter(device => device.product.name === productName)[0];
 
-
-    console.log(product, 'product inside device page')
-    console.log(product.hasOwnProperty('numberOfPorts'), 'checking property')
     return (
         <>
           <div className='device__toolbar--container'>

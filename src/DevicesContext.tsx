@@ -7,8 +7,9 @@ export const DevicesContext = createContext<DevicesContextType | null>(null);
 const DevicesProvider= ({children}: DevicesProviderProps) => {
     const [devices, setDevices] = useState<IDevices[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
-    const [search, setSearch] = useState<string>('')
-    const [filter, setFilter] = useState<string>('')
+    const [search, setSearch] = useState<string>('');
+    const [filter, setFilter] = useState<string>('');
+    const [view, setView] = useState<string>('list');
 
     useEffect(() => {
         devicesAPI.retrieve().then( data => {
@@ -18,7 +19,7 @@ const DevicesProvider= ({children}: DevicesProviderProps) => {
     }, []);
 
     return (
-        <DevicesContext.Provider value={{devices, loading, search, setSearch, filter, setFilter}}>
+        <DevicesContext.Provider value={{devices, loading, search, setSearch, filter, setFilter, view, setView}}>
             {children}
         </DevicesContext.Provider>
     )

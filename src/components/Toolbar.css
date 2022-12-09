@@ -19,30 +19,6 @@
     gap: .5rem;
 }
 
-.actions__listView--wrap {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.actions__listView--wrap:hover {
-    background: #F6F6F8;
-}
-
-.actions__listView {
-    position: relative;
-    top: 3px;
-    left: 3px;
-    width: 15px;
-    height: 15px;
-}
-
-.actions__gridView--container {
-    width: 20px;
-    height: 20px;
-    background-color: beige;
-}
-
 @media only screen and (min-width: 480px){
     .toolbar--container {
         display: flex;
