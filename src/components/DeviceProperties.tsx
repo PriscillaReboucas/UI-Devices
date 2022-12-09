@@ -26,15 +26,15 @@ export const DeviceProperties = ({product}:Props) => {
             </li>
             <li className="properties--wrap">
                 <h3>Max. power</h3>
-                <p>{product.hasOwnProperty('maxPower')? product.unifi.network.radios.na.maxPower + ' W ' : '-'}</p>
+                <p>{'maxPower' in product? product.unifi.network.radios.na.maxPower + ' W ' : '-'}</p>
             </li>
             <li className="properties--wrap">
                 <h3>Speed</h3>
-                <p>{product.hasOwnProperty('maxSpeedMegabitsPerSecond')? product.unifi.network.radios.na.maxSpeedMegabitsPerSecond + 'Mbps' : '-'}</p>
+                <p>{'maxSpeedMegabitsPerSecond' in product? product.unifi.network.radios.na.maxSpeedMegabitsPerSecond + 'Mbps' : '-'}</p>
             </li>
             <li className="properties--wrap">
                 <h3>Number of ports</h3>
-                <p>{product.hasOwnProperty('numberOfPorts')? product.unifi.network.numberOfPorts : '-'}</p>
+                <p>{'numberOfPorts' in product? product.unifi.network.numberOfPorts : '-'}</p>
             </li>
         </ul>
     )
