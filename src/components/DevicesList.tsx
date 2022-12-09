@@ -10,18 +10,17 @@ export const DevicesList = ({devices}:Props) => {
     return (
     <section className='devicesList--container'>
         <section className='devicesList__titles--container'>
-            <h2>Devices total</h2>
-            <h2>PRODUCT LINE</h2>
-            <h2>NAME</h2>
+            <h2 className='title title__small'>123 devices</h2>
+            <h2 className='title title__big'>Product Line</h2>
+            <h2 className='title title__big'>Name</h2>
         </section>
-        <section>
-        {devices &&
-                devices.map((device: IDevices) => {
-                    return (<article key={device.model_id}>
-                                <DeviceLine device={device} />
-                            </article>
-                    );
-                })}
+        <section className='devicesList__products--container'>
+        {devices && devices.map((device: IDevices) => {
+            return (<article className='products--container' key={device.model_id}>
+                        <DeviceLine device={device} />
+                    </article>
+            );
+        })}
         </section>
     </section>
     )

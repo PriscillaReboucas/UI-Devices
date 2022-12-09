@@ -1,5 +1,7 @@
 import { IDevices } from "../@types/devices.d";
 import { Link } from "react-router-dom";
+import './DeviceLine.css';
+
 type Props = {
     device: IDevices;
 };
