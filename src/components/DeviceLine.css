@@ -8,11 +8,15 @@
     cursor: pointer;
 }
 
+.line--container:hover {
+    background: #FBFBFB;
+}
+
 .line__text--container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: 4rem;
+    gap: 4.5rem;
     margin-left: 3rem;
 }
 
