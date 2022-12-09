@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { IDevices } from "../@types/devices.d";
-import './Card.css';
+import './DeviceCard.css';
 
 type Props = {
     device: IDevices;
   };
 
-export const Card = ({device}:Props) => {
+export const DeviceCard = ({device}:Props) => {
     return (<>
                 <Link  className="device__card--container"
                 to={`/devices/${device.product.name}`}

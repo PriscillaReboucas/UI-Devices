@@ -13,6 +13,7 @@ export const Device = () => {
 
 
     console.log(product, 'product inside device page')
+    console.log(product.hasOwnProperty('numberOfPorts'), 'checking property')
     return (
         <>
           <div className='device__toolbar--container'>

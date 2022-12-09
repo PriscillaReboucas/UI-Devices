@@ -31,12 +31,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-@media only screen and (min-width: 1360px){
+@media only screen and (min-width: 1472px){
     .cardGrid--flex {
         display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
     .devices--size {
         width: -webkit-calc(80% - 232px);

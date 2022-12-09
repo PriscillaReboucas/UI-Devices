@@ -1,5 +1,5 @@
 import { IDevices } from "../@types/devices.d";
-import { Card } from "./Card";
+import { DeviceCard } from "./DeviceCard";
 import "./DevicesGrid.css";
 
 type Props = {
@@ -15,7 +15,7 @@ export const DevicesGrid = ({ devices }: Props) => {
                 {devices &&
                 devices.map((device: IDevices) => {
                     return (<article key={device.model_id}>
-                                <Card device={device} />
+                                <DeviceCard device={device} />
                             </article>
                     );
                 })}
