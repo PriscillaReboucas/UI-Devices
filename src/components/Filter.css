@@ -56,15 +56,25 @@
     padding: 0 0.5rem 0.5rem 1rem;
 }
 
-.modal__main--container div {
+.modal__input--container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
     margin-bottom: .5rem;
+    transition: all .2s;
 }
 
-.modal__main--container div label {
+.modal__input--container:hover {
+    background: #FBFBFB;
+    cursor: pointer;
+}
+
+.modal__input {
+    cursor: pointer;
+}
+
+.modal__label {
     font-family: 'Lato';
     font-style: normal;
     font-size: 14px;
@@ -72,7 +82,7 @@
     font-weight: 400;
 }
 
-.modal__title {
+.modal__main__title {
     margin-bottom: 1rem;
     font-family: 'Lato';
     font-style: normal;

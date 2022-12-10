@@ -9,7 +9,7 @@ export const Filter = () => {
 
   const productLines = devices?.map (device =>  device.line.name);
   const uniqueProductLines = [...new Set(productLines)];
-  
+
     return (
         <>
             <div onClick={() => setToggleFilter(!toggleFilter)} className='filter__name'>Filter</div>
@@ -21,12 +21,12 @@ export const Filter = () => {
                     </div>
                 </div>
                 <div className='modal__main--container'>
-                    <h3 className='modal__title'>Product Line</h3>
+                    <h3 className='modal__main__title'>Product Line</h3>
                     {uniqueProductLines.map(product => {
                         return (
-                            <div key={product}>
-                                <input type='checkbox'/>
-                                <label>{product}</label>
+                            <div key={product} className='modal__input--container'>
+                                <input className='modal__input' type='checkbox'/>
+                                <label className='modal__label'>{product}</label>
                             </div>
                         )
                     })}
