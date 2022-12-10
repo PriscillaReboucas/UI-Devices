@@ -8,10 +8,6 @@ import { DevicesContextType } from '../@types/devices.d';
 export const Search = () => {
     const { search, setSearch } = useContext(DevicesContext) as DevicesContextType;
 
-    function clearInput () {
-        setSearch('')
-    };
-
     return (
     <div className='search--container'>
         <div className='search__icon--container'>
@@ -20,7 +16,7 @@ export const Search = () => {
             </div>
         </div>
         <input className='search__input' type='text' placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)}/>
-        <img className='close__input' src={close} alt='close search' onClick={() => clearInput()}/>
+        <img className='close__input' src={close} alt='close search' onClick={() => setSearch('')}/>
     </div>
     )
 }

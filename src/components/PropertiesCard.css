@@ -1,0 +1,31 @@
+.properties__items--wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid  #EDEDF0;
+    padding: 2px 0px;
+}
+
+.properties__title, .properties__name {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000a6;
+}
+
+.properties__name {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 768px) {
+    .properties__name {
+        width: auto;
+    }
+}

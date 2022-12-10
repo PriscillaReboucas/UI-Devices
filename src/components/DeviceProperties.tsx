@@ -1,5 +1,6 @@
 import { IDevices } from "../@types/devices.d";
 import './DeviceProperties.css';
+import { PropertiesCard } from "./PropertiesCard";
 
 type Props = {
     product: IDevices;
@@ -7,35 +8,14 @@ type Props = {
 
 export const DeviceProperties = ({product}:Props) => {
     return (
-        <ul className="properties--container">
-            <li className="properties--wrap">
-                <h3>Product Line</h3>
-                <p>{product.line.name}</p>
-            </li>
-            <li className="properties--wrap">
-                <h3>ID</h3>
-                <p>{product.line.id}</p>
-            </li>
-            <li className="properties--wrap">
-                <h3>Name</h3>
-                <p>{product.product.name}</p>
-            </li>
-            <li className="properties--wrap">
-                <h3>Short name</h3>
-                <p>{product.shortnames[0]}</p>
-            </li>
-            <li className="properties--wrap">
-                <h3>Max. power</h3>
-                <p>{'maxPower' in product? product.unifi.network.radios.na.maxPower + ' W ' : '-'}</p>
-            </li>
-            <li className="properties--wrap">
-                <h3>Speed</h3>
-                <p>{'maxSpeedMegabitsPerSecond' in product? product.unifi.network.radios.na.maxSpeedMegabitsPerSecond + 'Mbps' : '-'}</p>
-            </li>
-            <li className="properties--wrap">
-                <h3>Number of ports</h3>
-                <p>{'numberOfPorts' in product? product.unifi.network.numberOfPorts : '-'}</p>
-            </li>
-        </ul>
+    <ul className="properties--container">
+        <PropertiesCard title='Product Line'  name={product.line.name}/>
+        <PropertiesCard title='ID'  name={product.line.id}/>
+        <PropertiesCard title='Name'  name={product.product.name}/>
+        <PropertiesCard title='Short name'  name={product.shortnames[0]}/>
+        <PropertiesCard title='Max. Power'  name={'maxPower' in product? product.unifi.network.radios.na.maxPower + ' W ' : '-'}/>
+        <PropertiesCard title='Speed'  name={'maxSpeedMegabitsPerSecond' in product? product.unifi.network.radios.na.maxSpeedMegabitsPerSecond + 'Mbps' : '-'}/>
+        <PropertiesCard title='Number of ports'  name={'numberOfPorts' in product? product.unifi.network.numberOfPorts : '-'}/>
+    </ul>
     )
 }
