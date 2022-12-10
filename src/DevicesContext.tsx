@@ -9,6 +9,7 @@ const DevicesProvider= ({children}: DevicesProviderProps) => {
     const [loading, setLoading] = useState<boolean>(true);
     const [search, setSearch] = useState<string>('');
     const [filter, setFilter] = useState<string>('');
+    const [toggleFilter, setToggleFilter] = useState<boolean>(false);
     const [view, setView] = useState<string>('list');
 
     useEffect(() => {
@@ -19,7 +20,7 @@ const DevicesProvider= ({children}: DevicesProviderProps) => {
     }, []);
 
     return (
-        <DevicesContext.Provider value={{devices, loading, search, setSearch, filter, setFilter, view, setView}}>
+        <DevicesContext.Provider value={{devices, loading, search, setSearch, filter, setFilter, view, setView, toggleFilter, setToggleFilter}}>
             {children}
         </DevicesContext.Provider>
     )

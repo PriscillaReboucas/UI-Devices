@@ -52,6 +52,8 @@ export type DevicesContextType = {
     setFilter: Function
     view: string
     setView: Function
+    toggleFilter: boolean
+    setToggleFilter: Function
 }
 
 export type DevicesProviderProps = {
