@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.color--active {
+.filter__name:hover, .color--active {
     color: rgb(0, 111, 255);
 }
 

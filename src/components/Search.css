@@ -37,6 +37,27 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+    caret-color: #006FFF;
+    caret-shape: 5px solid bar;
+}
+
+.search__input:active {
+    caret-color: #006FFF;
+    caret-shape: bar;
+    border: none;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__input::placeholder {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.45);
 }
 
 .close__input {
