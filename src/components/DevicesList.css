@@ -1,51 +1,91 @@
 .devicesList--container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    width: 90%;  
+    margin: 1rem 0;
     padding: .5rem;
-    margin: 1rem 0 1rem .5rem;
 }
 
-.devicesList__titles--container {
+.devicesList--wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    border-bottom: 1px solid #EDEDF0;
     width: 100%;
-    padding: .1rem;
-    gap: 1rem;
+    padding: .5rem;
+    border-bottom: 1px solid #EDEDF0;
+    gap: 2.5rem;
 }
 
 .title {
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 400;
     line-height: 24px;
 }
 
-.title__small {
+.title__description {
+    font-weight: 400;
     font-size: 12px;
     color: #BDBDBD;
+    width: 20%;
+    text-align: center;
 }
 
-.title__big {
+.title__line {
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
     color: #000000a6;
+    width: 20%;
+    text-align: center;
 }
 
-.devicesList__products--container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.title__name {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000a6;
+    width: 60%;
 }
 
-.products--container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: .1rem;
+.action:hover {
+    background: #FBFBFB;
+    cursor: pointer;
+}
+
+.devicesList__image--container {
+    width: 20%;
+    text-align: center;
+}
+
+.line__text--title {
+    width: 20%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000a6;
+}
+
+.line__text--subtitle {
+    width: 60%;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+@media only screen and (min-width: 480px){
+    .devicesList--container{
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .title__line, .line__text--title {
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .devicesList--container{
+        margin: 1rem 1rem 1rem 3rem;
+    }
 }
