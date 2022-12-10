@@ -3,9 +3,10 @@ import { useContext } from 'react';
 import { DevicesContext } from '../DevicesContext';
 import { DevicesContextType } from '../@types/devices.d';
 import close from '../assets/close.png';
+import { Checkbox } from './Checkbox';
 
 export const Filter = () => {
-  const { filter, setFilter, toggleFilter, setToggleFilter, devices } = useContext(DevicesContext) as DevicesContextType;
+  const { toggleFilter, setToggleFilter, devices } = useContext(DevicesContext) as DevicesContextType;
 
   const productLines = devices?.map (device =>  device.line.name);
   const uniqueProductLines = [...new Set(productLines)];
@@ -25,8 +26,7 @@ export const Filter = () => {
                     {uniqueProductLines.map(product => {
                         return (
                             <div key={product} className='modal__input--container'>
-                                <input className='modal__input' type='checkbox'/>
-                                <label className='modal__label'>{product}</label>
+                                <Checkbox product={product} />
                             </div>
                         )
                     })}

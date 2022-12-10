@@ -48,12 +48,12 @@ export type DevicesContextType = {
     loading: boolean
     search: string
     setSearch: Function
-    filter: string
-    setFilter: Function
     view: string
     setView: Function
     toggleFilter: boolean
     setToggleFilter: Function
+    selected: Array<string>
+    setSelected: Function
 }
 
 export type DevicesProviderProps = {

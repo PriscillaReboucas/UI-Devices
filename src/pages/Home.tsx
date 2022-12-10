@@ -1,21 +1,21 @@
 import { useContext, useMemo } from "react";
-import { DevicesContextType } from "../@types/devices.d";
+import { DevicesContextType, IDevices } from "../@types/devices.d";
 import { DevicesContext } from "../DevicesContext";
 import { Toolbar } from "../components/Toolbar";
 import { DevicesGrid } from "../components/DevicesGrid";
 import { DevicesList } from "../components/DevicesList";
 
 export const Home = () => {
-  const { devices, loading, search, filter, view } = useContext(DevicesContext) as DevicesContextType;
+  const { devices, loading, search, selected, view } = useContext(DevicesContext) as DevicesContextType;
 
   const filteredProducts = useMemo(() => {
     const searchProducts = devices.filter(device => device.product.name.toLowerCase().includes(search.toLowerCase()));
-    if (filter && filter !== 'all') {
-      const devicesFiltered = searchProducts.filter(device => {return device.line.name.toLowerCase() === filter.toLowerCase()});
-      return devicesFiltered;
+    if (selected.length > 0) {
+      return searchProducts.filter(device => selected.includes(device.line.name));
+
     }
     return searchProducts;
-}, [filter, devices, search]);
+}, [selected, devices, search]);
 
   if (loading) {
     return (

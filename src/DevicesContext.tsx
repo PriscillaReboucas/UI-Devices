@@ -8,7 +8,7 @@ const DevicesProvider= ({children}: DevicesProviderProps) => {
     const [devices, setDevices] = useState<IDevices[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [search, setSearch] = useState<string>('');
-    const [filter, setFilter] = useState<string>('');
+    const [selected, setSelected] = useState<string[]>([])
     const [toggleFilter, setToggleFilter] = useState<boolean>(false);
     const [view, setView] = useState<string>('list');
 
@@ -20,7 +20,7 @@ const DevicesProvider= ({children}: DevicesProviderProps) => {
     }, []);
 
     return (
-        <DevicesContext.Provider value={{devices, loading, search, setSearch, filter, setFilter, view, setView, toggleFilter, setToggleFilter}}>
+        <DevicesContext.Provider value={{devices, loading, search, setSearch, view, setView, toggleFilter, setToggleFilter, selected, setSelected}}>
             {children}
         </DevicesContext.Provider>
     )
