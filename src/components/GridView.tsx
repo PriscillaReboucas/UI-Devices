@@ -2,7 +2,6 @@ import './GridView.css';
 import { useContext } from 'react';
 import { DevicesContext } from '../DevicesContext';
 import { DevicesContextType } from '../@types/devices.d';
-import union from '../assets/Union.png'
 
 export const GridView = () => {
   const { view, setView } = useContext(DevicesContext) as DevicesContextType;
@@ -17,5 +16,3 @@ export const GridView = () => {
     )
 }   
 
-
-{/* <img className='gridview__image' src={union} alt="grid icon" /> */}
