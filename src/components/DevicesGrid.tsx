@@ -9,7 +9,8 @@ type Props = {
 export const DevicesGrid = ({ devices }: Props) => {
   return (
     <>
-        <main className="cardGrid--container">
+        <main className="card--flex--container">
+          <div className="grid--wrapper">
             <p className="devices--size">{devices.length} devices</p>
             <section className="cardGrid--flex">
                 {devices &&
@@ -20,6 +21,8 @@ export const DevicesGrid = ({ devices }: Props) => {
                     );
                 })}
             </section>
+
+          </div>
         </main>
     </>
   );

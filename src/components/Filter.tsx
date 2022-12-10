@@ -6,14 +6,15 @@ import close from '../assets/close.png';
 import { Checkbox } from './Checkbox';
 
 export const Filter = () => {
-  const { toggleFilter, setToggleFilter, devices } = useContext(DevicesContext) as DevicesContextType;
+  const { selected, toggleFilter, setToggleFilter, devices } = useContext(DevicesContext) as DevicesContextType;
 
   const productLines = devices?.map (device =>  device.line.name);
   const uniqueProductLines = [...new Set(productLines)];
 
     return (
         <>
-            <div onClick={() => setToggleFilter(!toggleFilter)} className='filter__name'>Filter</div>
+            <div onClick={() => setToggleFilter(!toggleFilter)} 
+            className={`filter__name ${selected.length > 0? 'color--active': ''}`}>Filter</div>
             <div className={`modal__filter--container ${toggleFilter? 'active' : 'hidden'}`}>
                 <div className='modal__header--wrapper'>
                     <p className='modal__header__title'>Filter</p>
