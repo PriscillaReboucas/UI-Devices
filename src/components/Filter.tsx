@@ -8,20 +8,19 @@ export const Filter = () => {
   const { filter, setFilter, toggleFilter, setToggleFilter } = useContext(DevicesContext) as DevicesContextType;
 
     return (
-        <section>
-            <article className={`filter--container ${toggleFilter? 'hidden' : 'active'}`} 
-            onClick={() => setToggleFilter(!toggleFilter)}>Filter</article>
+        <>
+            <div onClick={() => setToggleFilter(!toggleFilter)} className='filter__name'>Filter</div>
             <div className={`modal__filter--container ${toggleFilter? 'active' : 'hidden'}`}>
                 <div className='modal__header--wrapper'>
                     <p className='modal__header__title'>Filter</p>
-                    <div>
+                    <div className='modal__btn--close'>
                         <img src={close} alt="close filter" onClick={() => setToggleFilter(!toggleFilter)}/>
                     </div>
                 </div>
                 <div className='modal__main--container'>
                     <h3 className='modal__title'>Product Line</h3>
                     <div>
-                        <input className='checkmark' type='checkbox'/>
+                        <input type='checkbox'/>
                         <label>UniFi</label>
                     </div>
                     <div>
@@ -58,7 +57,7 @@ export const Filter = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </>
     )
 }
 

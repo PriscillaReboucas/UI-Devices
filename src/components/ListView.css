@@ -15,3 +15,7 @@
     width: 15px;
     height: 15px;
 }
+
+.list--selected {
+    background-color: #F6F6F8;
+}

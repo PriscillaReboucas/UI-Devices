@@ -5,10 +5,10 @@ import { DevicesContextType } from '../@types/devices.d';
 import union from '../assets/Union.png'
 
 export const GridView = () => {
-  const { setView } = useContext(DevicesContext) as DevicesContextType;
+  const { view, setView } = useContext(DevicesContext) as DevicesContextType;
 
     return (
-        <div className='actions__gridView--container' onClick={() => setView('grid')}>
+        <div className={`actions__gridView--container ${view === 'grid'? 'grid--selected' : ''}`} onClick={() => setView('grid')}>
             <img className='gridview__image' src={union} alt="grid icon" />
         </div>
     )

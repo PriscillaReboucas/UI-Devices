@@ -5,10 +5,10 @@ import { DevicesContext } from '../DevicesContext';
 import { DevicesContextType } from '../@types/devices.d';
 
 export const ListView = () => {
-    const { setView } = useContext(DevicesContext) as DevicesContextType;
+    const { view, setView } = useContext(DevicesContext) as DevicesContextType;
 
     return (
-        <div className='actions__listView--wrap' onClick={() => setView('list')}>
+        <div className={`actions__listView--wrap ${view === 'list'? 'list--selected': ''}`} onClick={() => setView('list')}>
             <img className='actions__listView' src={listView} alt='list view'/>
         </div>
     )
