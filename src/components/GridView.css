@@ -1,20 +1,29 @@
-.actions__gridView--container {
-    width: 20px;
-    height: 20px;
+.grid__icon--container {
+    min-width: 20px;
+    min-height: 20px;
     cursor: pointer;
-    transition: .2s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;  
+    border-radius: .1rem;
+    align-content: stretch;
+    padding: .1rem;
 }
 
-.actions__gridView--container:hover {
-    background-color: #F6F6F8;
-}
-
-.gridview__image {
-    position: relative;
-    top: 3px;
-    left: 3px;
+.grid__icon--container span {
+    width: 6.9px;
+    height: 6.9px;
+    border: 1.9px solid #838691;;
+    border-radius: .15rem;
 }
 
 .grid--selected {
-    background-color: #F6F6F8;
+    background: #F6F6F8;
 }
+
+.grid--selected span {
+    background: #838691;
+}
+
+/* background: #838691; */

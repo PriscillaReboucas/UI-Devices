@@ -8,8 +8,14 @@ export const GridView = () => {
   const { view, setView } = useContext(DevicesContext) as DevicesContextType;
 
     return (
-        <div className={`actions__gridView--container ${view === 'grid'? 'grid--selected' : ''}`} onClick={() => setView('grid')}>
-            <img className='gridview__image' src={union} alt="grid icon" />
+        <div className={`grid__icon--container ${view === 'grid'? 'grid--selected' : ''}`} onClick={() => setView('grid')}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     )
 }   
+
+
+{/* <img className='gridview__image' src={union} alt="grid icon" /> */}
