@@ -2,6 +2,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    transition: .2s;
 }
 
 .actions__gridView--container:hover {
