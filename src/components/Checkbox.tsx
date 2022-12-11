@@ -4,7 +4,7 @@ import { DevicesContextType } from "../@types/devices.d";
 
 type Props = {
     product: string
-}
+};
 
 export const Checkbox = ({product}:Props) => {
     const { selected, setSelected } = useContext(DevicesContext) as DevicesContextType;

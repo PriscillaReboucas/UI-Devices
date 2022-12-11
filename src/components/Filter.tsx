@@ -26,7 +26,7 @@ export const Filter = () => {
                     <h3 className='modal__main__title'>Product Line</h3>
                     {uniqueProductLines.map(product => {
                         return (
-                            <div key={product} className='modal__input--container'>
+                            <div key={product} className='modal__checkbox--container'>
                                 <Checkbox product={product} />
                             </div>
                         )
