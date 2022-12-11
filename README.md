@@ -1,9 +1,35 @@
-# Getting Started with Create React App
+# Ubiquiti | Devices - Frontend Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Goal
+The objective of this project was to build a frontend application that will allow Ubiquiti employees to explore, find, look up and share information about all the Ubiquiti devices.
+To create the project, I followed the design that was shared with the Ubiquiti standards.
+
+## Tools
+- Typescript
+- React
+- Tests: Jest and React testing library
+- Netlify: deploy available https://ubiquiti-devices.netlify.app/
+
+## Project
+The application contains two pages:
+
+- Home -> In this page You will find a list with products and each one of them has an image, product name and product line. You can search for a product name using the input and it is possible to filter by product line using the filter button. It is available two icons to change the view of the lists, by default it will start with the list view, but you can change to have the grid view. If you want to see specifications about one product, you can click in an image or product name/line.
+- Device -> Here you can find the properties about an individual product.
+
+## Challenges
+- The products contain different properties, so during the construction of the Device page, I was extra careful with the code, to check each one of them.
+- Take care about the small details provided by the Figma file. To help me with it, I decided to create the icons (grid and list view) and the Ubiquiti logo (the last one using the vector) using only css to apply the design specifications. 
+- I learnt new approaches to change the elements, for example, the caret-color to change the text input cursor color. 
+- Creating a filter with multiple selections with no select/option html tags. 
+- Provide one list with the search and filter working at the same time.
+
+## Future implementation
+- It would be interesting to have one page to display the product lines available with an image and property name and they could be clickable to redirect the user to a page with the devices related with the product line.
+- Add more tests - due to the deadline I decided to focus on refactoring.
 
 ## Available Scripts
 
+To have access to the project, you need to clone and it is important to run the command `npm i`.
 In the project directory, you can run:
 
 ### `npm start`
