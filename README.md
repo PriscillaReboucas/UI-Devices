@@ -13,7 +13,7 @@ To create the project, I followed the design that was shared with the Ubiquiti s
 ## Project
 The application contains two pages:
 
-- Home -> In this page You will find a list with products and each one of them has an image, product name and product line. You can search for a product name using the input and it is possible to filter by product line using the filter button. It is available two icons to change the view of the lists, by default it will start with the list view, but you can change to have the grid view. If you want to see specifications about one product, you can click in an image or product name/line.
+- Home -> In this page You will find a list with products and each one of them has an image, product name and product line. You can search for a product name using the input and it is possible to filter by product line using the filter button. There are two icons available to change the view of the lists, by default it will start with the list view, but you can change to have the grid view. If you want to see specifications about one product, you can click in an image or product name/line.
 - Device -> Here you can find the properties about an individual product.
 
 ## Challenges
