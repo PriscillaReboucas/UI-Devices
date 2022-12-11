@@ -13,7 +13,7 @@ export const DeviceProperties = ({product}:Props) => {
         <PropertiesCard title='ID'  name={product.line.id}/>
         <PropertiesCard title='Name'  name={product.product.name}/>
         <PropertiesCard title='Short name'  name={product.shortnames[0]}/>
-        <PropertiesCard title='Max. Power'  name={'maxPower' in product? product.unifi.network.radios.na.maxPower + ' W ' : '-'}/>
+        <PropertiesCard title='Max. Power'  name={'maxPower' in product? product.unifi?.network.radios.na.maxPower + ' W ' : '-'}/>
         <PropertiesCard title='Speed'  name={'maxSpeedMegabitsPerSecond' in product? product.unifi.network.radios.na.maxSpeedMegabitsPerSecond + 'Mbps' : '-'}/>
         <PropertiesCard title='Number of ports'  name={'numberOfPorts' in product? product.unifi.network.numberOfPorts : '-'}/>
     </ul>

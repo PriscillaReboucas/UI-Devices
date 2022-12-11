@@ -18,7 +18,8 @@ export const DevicesList = ({devices}:Props) => {
                 return (
                     <Link className='devicesList--wrapper action'  
                     key={device.model_id}
-                    to={`/devices/${device.product.name}`}
+                    to={`/device/${device.product.name}`}
+                    data-testId='devicesList--wrapper'
                     >
                         <div className='devicesList__image--container'>
                             <img className='devicesList__image' 

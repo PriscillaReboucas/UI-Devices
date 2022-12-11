@@ -9,7 +9,7 @@ export const Home = () => {
   const { devices, loading, search, selected, view } = useContext(DevicesContext) as DevicesContextType;
 
   const filteredProducts = useMemo(() => {
-    const searchProducts = devices.filter(device => device.product.name.toLowerCase().includes(search.toLowerCase()));
+    const searchProducts = devices?.filter(device => device.product.name.toLowerCase().includes(search.toLowerCase()));
       if (selected.length > 0) {
         return searchProducts.filter(device => selected.includes(device.line.name));
       }

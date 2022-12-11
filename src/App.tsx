@@ -3,13 +3,14 @@ import { Home } from "./pages/Home";
 import { Device } from "./pages/Device";
 import { Header } from "./components/Header";
 
+
 function App() {
   return (
     <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/devices/:productName" element={<Device />}></Route>
+        <Route path="/device/:productName" element={<Device />}></Route>
       </Routes>
     </div>
   );

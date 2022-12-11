@@ -20,7 +20,8 @@ const DevicesProvider= ({children}: DevicesProviderProps) => {
     }, []);
 
     return (
-        <DevicesContext.Provider value={{devices, loading, search, setSearch, view, setView, toggleFilter, setToggleFilter, selected, setSelected}}>
+        <DevicesContext.Provider value={{devices, loading, search, setSearch, view, setView, toggleFilter, 
+        setToggleFilter, selected, setSelected}}>
             {children}
         </DevicesContext.Provider>
     )
