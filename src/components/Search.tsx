@@ -15,7 +15,8 @@ export const Search = () => {
                 <img className='search__icon' src={searchIcon} alt='search icon'/>
             </div>
         </div>
-        <input className='search__input' type='text' placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)}/>
+        <input className='search__input' type='text' placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)}
+        data-testid='search__input' aria-label='search__input'/>
         <img className='close__input' src={close} alt='close search' onClick={() => setSearch('')}/>
     </div>
     )

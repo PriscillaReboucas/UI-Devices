@@ -10,7 +10,7 @@ describe('DeviceCard component', () => {
     test('render DeviceCard component', () => {
         render(
             <Router>
-            <DeviceCard device={device}/>
+                <DeviceCard device={device}/>
             </Router>
         );
         
@@ -21,7 +21,7 @@ describe('DeviceCard component', () => {
     test('should return airMax as product name', () => {
         render(
             <Router>
-            <DeviceCard device={device}/>
+                <DeviceCard device={device}/>
             </Router>
         );
 

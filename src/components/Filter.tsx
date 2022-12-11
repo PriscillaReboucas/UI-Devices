@@ -13,11 +13,11 @@ export const Filter = () => {
 
     return (
         <>
-            <div onClick={() => setToggleFilter(!toggleFilter)} 
+            <div onClick={() => setToggleFilter(!toggleFilter)} data-testid='filter__name'
             className={`filter__name ${selected.length > 0? 'color--active': ''}`}>Filter</div>
-            <div className={`modal__filter--container ${toggleFilter? 'active' : 'hidden'}`}>
+            <div className={`modal__filter--container ${toggleFilter? 'active' : 'hidden'}`} >
                 <div className='modal__header--wrapper'>
-                    <p className='modal__header__title'>Filter</p>
+                    <p className='modal__header__title' data-testid='modal__header__title'>Filter</p>
                     <div className='modal__btn--close'>
                         <img src={close} alt="close filter" onClick={() => setToggleFilter(!toggleFilter)}/>
                     </div>
