@@ -1,4 +1,3 @@
-import listView from '../assets/listView.png';
 import './ListView.css';
 import { useContext } from 'react';
 import { DevicesContext } from '../DevicesContext';
@@ -18,6 +17,3 @@ export const ListView = () => {
         </div>
     )
 }
-
-
-{/* <img className='actions__listView' src={listView} alt='list view'/> */}
