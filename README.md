@@ -25,7 +25,6 @@ The application contains two pages:
 
 ## Future implementation
 - It would be interesting to have one page to display the product lines available with an image and property name and they could be clickable to redirect the user to a page with the devices related with the product line.
-- Add more tests - due to the deadline I decided to focus on refactoring.
 
 ## Available Scripts
 
